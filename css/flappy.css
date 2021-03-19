@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Pixel';
+    src: url('../fonts/Pixel.ttf')
+}
+
+[wm-flappy] {
+    display: flex;
+
+    position: relative;
+    border: 5px solid dodgerblue;
+    height: 700px;
+    width: 1200px;
+    margin: 15px;
+    background-color: skyblue;
+
+    overflow: hidden;
+}
+
+.passaro {
+    position: absolute;
+    width: 60px;
+    left: calc(50% - 30px);
+}
+
+.par-de-barreiras {
+    position: absolute;
+    top: 0;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column; /* organizado na vertical */
+    justify-content: space-between; /* espaço para ficar um encima e outro embaixo e o espaço no meio */
+}
+
+.barreira {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.barreira .borda {
+    height: 30px;
+    width: 130px;
+    background: linear-gradient(90deg, #639301, #A5E82E);
+    border: 2px solid #000;
+}
+
+.barreira .corpo {
+    height: 150px;
+    width: 110px;
+    background: linear-gradient(90deg, #639301, #A5E82E);
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+}
+
+.progresso {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    font-family: Pixel;
+    font-size: 70px;
+
+    z-index: 10;
+}
+
+.colidiu {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+
+    align-content: center;
+    flex: 1;
+    flex-flow: column nowrap;
+    place-content: center;
+    align-items: flex-start;
+
+    text-align: center;
+
+    font-size: 2rem;
+    background-color: #0d262d96;
+    z-index: 1;
+}
+
+.colidiu .message,
+.colidiu .message {
+    padding: 10px;
+    flex-grow: 0;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+    z-index: 2;
+}
